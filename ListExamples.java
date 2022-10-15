@@ -3,7 +3,18 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
 
-class ListExamples {
+class ListExamples //implements StringChecker {
+  {
+
+//@Override
+ //public boolean checkString(String s) {
+    //if(s.contains("ed")){
+      //return true;
+    //}
+    //else {
+      //return false;
+    //}
+  //}
 
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
@@ -12,7 +23,7 @@ class ListExamples {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
-        result.add(0, s);
+        result.add(s);
       }
     }
     return result;
